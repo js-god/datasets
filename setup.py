@@ -49,6 +49,7 @@ REQUIRED_PKGS = [
 TESTS_REQUIRE = [
     'jupyter',
     'pytest',
+    'apache-beam',
 ]
 
 if sys.version_info.major == 3:
@@ -82,6 +83,9 @@ DATASET_EXTRAS = {
         # route to install OpenCV
         'opencv-python==3.4.0.14'
     ],
+    # Large datasets that require Apache Beam for distributed data generation:
+    # * <LIST HERE>
+    'apache-beam': ['apache-beam'],
     'librispeech': ['pydub'],  # and ffmpeg installed
     'svhn': ['scipy'],
 }
